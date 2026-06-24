@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christine Li | Portfolio</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f7fb;
+        --text: #1d2433;
+        --muted: #4f5d75;
+        --card: #ffffff;
+        --accent: #4f46e5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(120deg, #4f46e5, #9333ea);
+        color: #fff;
+        padding: 4rem 1.25rem 3rem;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: clamp(2rem, 6vw, 3rem);
+      }
+
+      header p {
+        margin: 0.75rem auto 0;
+        max-width: 36rem;
+      }
+
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 3rem;
+      }
+
+      section {
+        background: var(--card);
+        border-radius: 14px;
+        padding: 1.5rem;
+        box-shadow: 0 8px 24px rgba(29, 36, 51, 0.08);
+        margin-bottom: 1.25rem;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .project-card {
+        border: 1px solid #e6e8ef;
+        border-radius: 10px;
+        padding: 1rem;
+      }
+
+      .project-card h3 {
+        margin-top: 0;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 0 1.25rem 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Christine Li</h1>
+      <p>
+        Software engineer building thoughtful web experiences. I enjoy solving real
+        problems with clean code and user-centered design.
+      </p>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a developer focused on modern web technologies. I like creating fast,
+          accessible, and maintainable products that help people get things done.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects">
+          <article class="project-card">
+            <h3>Project One</h3>
+            <p class="muted">A full-stack app for managing personal goals and habits.</p>
+          </article>
+          <article class="project-card">
+            <h3>Project Two</h3>
+            <p class="muted">A responsive dashboard for tracking metrics in real-time.</p>
+          </article>
+          <article class="project-card">
+            <h3>Project Three</h3>
+            <p class="muted">A portfolio-ready UI kit built with reusable components.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Interested in collaborating? Reach out at
+          <a href="mailto:christineli@example.com">christineli@example.com</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Christine Li. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
